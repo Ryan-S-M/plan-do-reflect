@@ -25,6 +25,18 @@ export const placeholderProjects: Project[] = [
         created_at: '2025-01-01',
         updated_at: '2025-01-01',
     },
+    {
+        id: '3',
+        name: 'Project 3',
+        description: 'Description 3',
+        start_date: '2025-01-01',
+        completed_date: null,
+        completed: false,
+        priority: 1,
+        tags: ['tag5'],
+        created_at: '2025-01-01',
+        updated_at: '2025-01-01',
+    },
 ];
 export const placeholderTasks: Task[] = [
     {
