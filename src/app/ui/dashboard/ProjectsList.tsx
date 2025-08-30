@@ -9,7 +9,7 @@ export default function ProjectsList({
   tasks: Task[];
 }) {
   return (
-    <ul className="divide-y border-b">
+    <ul>
       {projects.map((p) => {
         const projectTasks = tasks.filter((t) => t.project_id === p.id);
         return (
