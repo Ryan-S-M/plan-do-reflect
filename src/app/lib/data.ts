@@ -1,12 +1,13 @@
 // insert database operations here
 import { Project } from "./definitions";
-
+import { placeholderProjects } from "./placeholder";
+import { placeholderTasks } from "./placeholder";
 export async function getProjects() {
     try {   
         // const response = await fetch('/api/projects');
         // const data = await response.json();
         // return data;
-        const projects: Project[] = [];
+        const projects: Project[] = placeholderProjects;
         return projects;
     } catch (error) {
         console.error('Error fetching projects:', error);
@@ -15,13 +16,13 @@ export async function getProjects() {
 }
 
 export async function getProject(id: string) {
-    return {};
+    return placeholderProjects.find((project) => project.id === id);
 }
 
 export async function getTasks() {
-    return [];
+    return placeholderTasks;
 }
 
 export async function getTask(id: string) {
-    return {};
+    return placeholderTasks.find((task) => task.id === id);
 }
