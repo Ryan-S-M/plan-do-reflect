@@ -1,5 +1,5 @@
 import { getProjects, getTasks } from "@/app/lib/data";
-import ProjectsList from "@/app/ui/dashboard/ProjectsList";
+import ProjectSection from "@/app/ui/dashboard/ProjectSection";
 export default async function Page() {
     const [projects, tasks] = await Promise.all([getProjects(), getTasks()]);
 
@@ -8,8 +8,13 @@ export default async function Page() {
     
     return (
         <div>
-            <p>Dashboard Page</p>
-            <ProjectsList projects={active_projects} tasks={tasks} />
+            <div className="mb-[32px]">
+                <ProjectSection heading="Active Projects" projects={active_projects} tasks={tasks} />
+            </div>
+
+            <div className="mb-[32px]">
+                <ProjectSection heading="Completed Projects" projects={completed_projects} tasks={tasks} />
+            </div>
         </div>
     );
 }
