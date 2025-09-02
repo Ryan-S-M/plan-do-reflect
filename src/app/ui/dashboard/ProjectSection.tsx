@@ -13,7 +13,7 @@ export default function ProjectSection({ heading, projects, tasks }: { heading: 
                 onClick={() => setShowCompleted(!showCompleted)}
             >
                 <span className="font-medium">{heading}</span>
-                <span className="text-sm text-gray-500">{showCompleted ? "-" : "+"}</span>
+                <span className="text-sm text-gray-500">{showCompleted ? "−" : "+"}</span>
             </button>
             {showCompleted && (
                 <div className="p-3">
